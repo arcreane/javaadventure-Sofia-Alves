@@ -2,12 +2,12 @@ package com.company;
 
 public class Hero {
 
-    private int pointDeVie =200;
+    private int pointDeVie = 200;
     private int flasqueDeau;
 
-    public Hero (int ptv, int fde){
-        this.pointDeVie= ptv;
-        this.flasqueDeau= fde;
+    public Hero(int ptv, int fde) {
+        this.pointDeVie = ptv;
+        this.flasqueDeau = fde;
     }
 
     public int getPointDeVie() {
@@ -16,14 +16,17 @@ public class Hero {
     }
 
     public void setPointDeVie(int pointDeVie) {
+
         this.pointDeVie = pointDeVie;
     }
 
     public int getFlasqueDeau() {
+
         return flasqueDeau;
     }
 
     public void setFlasqueDeau(int flasqueDeau) {
+
         this.flasqueDeau = flasqueDeau;
     }
 }
