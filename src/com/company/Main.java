@@ -12,38 +12,47 @@ public class Main {
         Equipement epee = new Equipement("epee", 0);
         Monsters sorciere = new Monsters("witch", 180, 0);
         Monsters barbare = new Monsters("olaf", 160, 0);
+        // les dégats et point d'attaque seront agrémenté après en ramdom .
 
         aventurier.setFlasqueDeau(10);
-        aventurier.setPointDeVie(200);
+        aventurier.setPointDeVie(300);
 
 
         System.out.println("Bienvenue dans le dongeon");
         System.out.println("Vous avez " + aventurier.getPointDeVie() + " Point de vie, " + aventurier.getFlasqueDeau() + " flasques pour combatre vos ennemies et une ");
+        // variable en int est pour le nombre de pièce. Dans le do, selon la condition les pièces change.
         int i = 1;
+
         do {
 
-            if (aventurier.getPointDeVie() > 0) ;
+            if (aventurier.getPointDeVie() > 0) ;// if pour avec en argument "aventurier.getPointDeVie..." pour continuer (pour pas) s'il a plus de vie !
             {
                 System.out.println("Room" + i);
 
+                Monsters enemieActuel;// pour random les enemies
+
                 Random random = new Random();
-                int nbrAl = random.nextInt(1);
+                int nbrAl = random.nextInt(2);
 
                 if (nbrAl == 0) {
-                    Monsters enemieActuel = sorciere;
+                    enemieActuel = sorciere;
                 } else {
-                    Monsters enemieActuel = barbare;
+                    enemieActuel = barbare;
                 }
 
-                Monsters enemieActuel = barbare || sorciere;
+                // a cause de cette ligne (38), je n'arrive pas à faire le random entre barbare et sorcière !!!
+
 
 
                 if (enemieActuel == barbare) {
 
+                    // on va faire un random pour infliger nombre de dégat aléatoire.
+                    //do et while
                     do {
-                        epee.setDegat((int) (5 + (Math.random() * 30)));
+                        //Le .get est une fonction renvoyant une propriété, alors que le .set définit la propriété.
+                        epee.setDegat((int) (5 + (Math.random() * 30))); // int pour renvoyer un entier
                         int degat = epee.getDegat();
-                        barbare.setPointDeVie(barbare.getPointDeVie() - degat);
+                        barbare.setPointDeVie(barbare.getPointDeVie() - degat); // on enlève les dégats au vie du barbare
                         System.out.println("Il reste au barbare " + barbare.getPointDeVie());
 
                         barbare.setPointAttaque((int) (5 + (Math.random() * 30)));

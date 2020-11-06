@@ -13,18 +13,22 @@ public class Equipement {
     }
 
     public String getNom_Arme() {
+
         return nom_Arme;
     }
 
     public void setNom_Arme(String nom_Arme) {
+
         this.nom_Arme = nom_Arme;
     }
 
     public int getDegat() {
+
         return degat;
     }
 
     public void setDegat(int degat) {
+
         this.degat = degat;
     }
 }

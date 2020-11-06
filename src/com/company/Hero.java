@@ -1,7 +1,7 @@
 package com.company;
 
 public class Hero {
-
+    // 2 constructeurs
     private int pointDeVie = 200;
     private int flasqueDeau;
 
